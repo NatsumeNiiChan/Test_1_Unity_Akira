@@ -19,14 +19,14 @@ public class ItemCollector : MonoBehaviour
     private GameObject item3;
     private GameObject item4;
     private GameObject item5;
-    private List<GameObject> collectedItems = new List<GameObject>();
+    [SerializeField] private List<GameObject> collectedItems = new List<GameObject>();
 
     //public GameObject[] ItemArray = { item1, item2, item3, item4, item5 };
     public GameObject[] ItemArray;
 
     private void Start()
     {
-        ItemArray = new GameObject[5];
+        //ItemArray = new GameObject[5];
     }
 
     void Update()
