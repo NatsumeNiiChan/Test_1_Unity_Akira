@@ -15,6 +15,7 @@ public class WinterSportsGame : MonoBehaviour
     - Nach Abschluss ALLER Refaktorisierungen laden Sie oli90martin@web.de als Collaborator zu Ihrer Git-Repository ein.
     */
 
+    //Festlegung von Variablen und erstellen einer Liste
     public List<string> Achievements = new List<string>();
 
     [SerializeField] private GameObject ski;
