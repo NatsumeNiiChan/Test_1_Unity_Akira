@@ -21,19 +21,12 @@ public class ItemCollector : MonoBehaviour
     private GameObject item5;
     private List<GameObject> collectedItems = new List<GameObject>();
 
-    private GameObject item;
-    private int itemNumber = 5;
+    //public GameObject[] ItemArray = { item1, item2, item3, item4, item5 };
     public GameObject[] ItemArray;
 
     private void Start()
     {
-        ItemArray = new GameObject[itemNumber];
-        for (int i = 0; i < itemNumber; i++)
-        {
-            //item = item + [i];
-
-            ItemArray[i] = item;
-        }
+        ItemArray = new GameObject[5];
     }
 
     void Update()
@@ -43,27 +36,9 @@ public class ItemCollector : MonoBehaviour
 
     void CollectItems()
     {
-
-
-        if (item1 != null)
+        foreach (GameObject item in ItemArray)
         {
-            collectedItems.Add(item1);
-        }
-        if (item2 != null)
-        {
-            collectedItems.Add(item2);
-        }
-        if (item3 != null)
-        {
-            collectedItems.Add(item3);
-        }
-        if (item4 != null)
-        {
-            collectedItems.Add(item4);
-        }
-        if (item5 != null)
-        {
-            collectedItems.Add(item5);
+            collectedItems.Add(item);
         }
     }
 }
