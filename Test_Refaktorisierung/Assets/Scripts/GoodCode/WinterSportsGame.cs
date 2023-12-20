@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class WinterSportsGame_goodCode : MonoBehaviour
+public class WinterSportsGame : MonoBehaviour
 {
     /*
     Aufgabenstellung: Refaktorisierung

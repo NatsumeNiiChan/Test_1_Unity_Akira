@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class NumberFilter_goodCode : MonoBehaviour
+public class NumberFilter : MonoBehaviour
 {
     /*
    Aufgabenstellung: Refaktorisierung
