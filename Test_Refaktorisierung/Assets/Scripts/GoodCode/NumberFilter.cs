@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class NumberFilter : MonoBehaviour
 {
@@ -17,5 +18,13 @@ public class NumberFilter : MonoBehaviour
     public int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     public int[] evenNumbers;
     public int[] oddNumbers;
+    //private int Sort;
+    //private string Number;
 
+    //private void Start()
+    //{
+    //    List<int> numbers = new List<int> { new int { Sort = 1 }, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    //    var sortedByEven = numbers.OrderBy(n => n.Sort);
+    //}
 }

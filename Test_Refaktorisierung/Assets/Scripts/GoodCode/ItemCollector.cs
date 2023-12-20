@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class ItemCollector : MonoBehaviour
 {
@@ -13,20 +14,37 @@ public class ItemCollector : MonoBehaviour
     - Nach Abschluss aller Refaktorisierungen laden Sie oli90martin@web.de als Collaborator zu Ihrer Git-Repository ein.
     */
 
-                        public GameObject item1;
-                        public GameObject item2;
-                        public GameObject item3;
-                        public GameObject item4;
-                        public GameObject item5;
-           private List<GameObject> collectedItems = new List<GameObject>();
+    private GameObject item1;
+    private GameObject item2;
+    private GameObject item3;
+    private GameObject item4;
+    private GameObject item5;
+    private List<GameObject> collectedItems = new List<GameObject>();
 
-            void Update()
-            {
-                CollectItems();
-            }
+    private GameObject item;
+    private int itemNumber = 5;
+    public GameObject[] ItemArray;
+
+    private void Start()
+    {
+        ItemArray = new GameObject[itemNumber];
+        for (int i = 0; i < itemNumber; i++)
+        {
+            //item = item + [i];
+
+            ItemArray[i] = item;
+        }
+    }
+
+    void Update()
+    {
+        CollectItems();
+    }
 
     void CollectItems()
     {
+
+
         if (item1 != null)
         {
             collectedItems.Add(item1);

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Item
+  - fire
+  - water
+  - ice
+  - stone
   layers:
   - Default
   - TransparentFX

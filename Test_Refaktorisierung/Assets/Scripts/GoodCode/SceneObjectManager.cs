@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class SceneObjectManager : MonoBehaviour
 {
@@ -24,20 +25,24 @@ public class SceneObjectManager : MonoBehaviour
     [SerializeField] private string[] enemyTypes = { "fire", "water", "ice", "stone" };
     private Vector3 itemPositionRange = new Vector3(10f, 10f, 10f);
 
+    private int enemyNumber = 6;
+    private int itemNumber = 6;
+
     private void Start()
     {
-        if (enemies == null)
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach (GameObject enemy in enemies)
+        enemies = new GameObject[enemyNumber];
+        for (int i = 0; i < enemyNumber; i++)
         {
-            //enemy.tag = enemyTypes
+            enemies[i] = GameObject.FindGameObjectWithTag("Enemy");
+            enemies[i].tag = enemyTypes[Random.Range(0, 3)];
         }
 
-        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-        foreach (GameObject item in items)
+        items = new GameObject[itemNumber];
+        for (int i = 0; i < itemNumber; i++)
         {
-            item.transform.position = itemPositionRange;
+            items[i] = GameObject.FindGameObjectWithTag("Item");
+            items[i].tag = "positionedItem";
+            items[i].transform.position = itemPositionRange;
         }
     }
 
